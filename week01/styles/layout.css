@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    grid-column: 1/4;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+
+h1,
+h2 {
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem
+}
+
+main {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+main section {
+    background-color: lightgray;
+}
+
+footer {
+    grid-column: 1/4;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    text-align: center;
+}
