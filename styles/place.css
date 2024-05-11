@@ -71,7 +71,7 @@ footer {
 
 /* Media Query for larger screens */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 900px) {
     .weather-icon {
         display: none;
     }
@@ -81,5 +81,40 @@ footer {
         font-size: 2rem;
     }
 
-    
+    main {
+        position: relative;
+    }
+
+    h2 {
+        position: relative;
+        top: .5rem;
+        right: 2rem;
+        text-align: left;
+        background-color: var(--primary-color);
+        border-radius: .5rem;
+        padding: 1rem;
+        color: var(--secondary-color);
+    }
+
+    .data-section {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: .5rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .weather-section {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: .5rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    footer {
+        margin: 0;
+    }
 }
