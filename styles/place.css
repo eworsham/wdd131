@@ -28,7 +28,7 @@ h1 {
 
 /* Main Section */
 
-.hero img{
+.hero img {
     width: 100%;
     height: auto;
 }
@@ -66,8 +66,9 @@ footer {
     color: var(--secondary-color);
     padding: 1rem;
     margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
-
 
 /* Media Query for larger screens */
 
@@ -93,6 +94,7 @@ footer {
         background-color: var(--primary-color);
         border-radius: .5rem;
         padding: 1rem;
+        margin-bottom: 1rem;
         color: var(--secondary-color);
     }
 
