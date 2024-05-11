@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #DA291C;
+    --secondary-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rethink Sans", sans-serif;
+    text-align: center;
+}
+
+/* Header Section */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+}
+
+/* Main Section */
+
+picture img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    padding: 1rem;
+    grid-column: 1/3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+.label {
+    font-weight: 600;
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switzerland</title>
+    <meta name="description" content="Switzerland | WDD 131 | Ryan Worsham">
+    <meta name="author" content="Ryan Worsham">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Switzerland</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 1000px)" srcset="images/switzerland-large.webp">
+            <source media="(min-width: 500px)" srcset="images/switzerland-medium.webp">
+            <img src="images/switzerland-small.webp" alt="hero image" width="500" height="1000">
+        </picture>
+        <section class="grid">
+            <h2>Data</h2>
+            <p class="label">Area:</p>
+            <p class="value">Fix me</p>
+            <p class="label">Population:</p>
+            <p class="value"></p>
+            <p class="label">Capital:</p>
+            <p class="value"></p>
+            <p class="label">Languages:</p>
+            <p class="value"></p>
+            <p class="label">Currency:</p>
+            <p class="value"></p>
+            <p class="label">Time Zone:</p>
+            <p class="value"></p>
+            <p class="label">Calling Code:</p>
+            <p class="value"></p>
+            <p class="label">Internet TLD:</p>
+            <p class="value"></p>
+        </section>
+        <section class="grid">
+            <h2>Weather</h2>
+            <p class="label">Temperature:</p>
+            <p class="value"></p>
+            <p class="label">Conditions:</p>
+            <p class="value"></p>
+            <p class="label">Wind:</p>
+            <p class="value"></p>
+            <p class="label" id="wind-chill">Wind Chill:</p>
+            <p class="value"></p>
+        </section>
+    </main>
+    <footer>
+        <p>©️<span id="currentYear"></span> | Ryan Worsham | Georgia, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
