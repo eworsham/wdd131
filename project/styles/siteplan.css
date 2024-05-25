@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #AD2831; /* Auburn */
+    --secondary-color: #1B2845; /* Space Cadet */
+
+    --accent-color: #F5F5F5; /* White Smoke */
+
+    --heading-font: "Playfair Display", serif;
+    --paragraph-font: "Raleway", san-serif;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: var(--paragraph-font);
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+}
+
+h1, 
+h2, 
+h3 
+{
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+}
+
+header h1 {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+    text-align: center;
+}
