@@ -1,4 +1,8 @@
 const productNameSelectLocator = document.querySelector("#productName");
+const reviewCountLocator = document.querySelector("#reviewCount");
+const formLocator = document.querySelector("#form");
+
+let reviewCount = localStorage.getItem("reviewCount") || 0;
 
 const products = [
     {
@@ -28,10 +32,24 @@ const products = [
     }
 ];
 
-products.forEach(product => {
-    const option = document.createElement("option");
-    option.setAttribute("value", product.id);
-    option.textContent = product.name;
+if (productNameSelectLocator) {
+    products.forEach(product => {
+      const option = document.createElement("option");
+      option.setAttribute("value", product.id);
+      option.textContent = product.name;
+      
+      productNameSelectLocator.appendChild(option);
+    });
 
-    productNameSelectLocator.appendChild(option);
-});
+}
+
+if (formLocator) {
+    formLocator.addEventListener("submit", () => {    
+        reviewCount++;
+        localStorage.setItem("reviewCount", reviewCount);    
+    });
+}
+
+if (reviewCountLocator) {
+    reviewCountLocator.innerHTML = `Total reviews submitted: ${reviewCount}`;
+}
