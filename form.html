@@ -21,13 +21,13 @@
     </header>
     <main>
         <form action="review.html" method="get">
-            <label for="productName">Product Name</label>
+            <label for="productName">Product Name *</label>
             <select name="productName" id="productName" required>
                 <option value="" disabled selected>Please Select</option>
             </select>
 
             <div class="rating">
-                <p>Overall Rating</p>
+                <p>Overall Rating *</p>
                 <label><input type="radio" name="rating" id="oneStar" required>&star;</label>
                 <label><input type="radio" name="rating" id="twoStar" required>&star;&star;</label>
                 <label><input type="radio" name="rating" id="threeStar" required>&star;&star;&star;</label>
@@ -35,7 +35,7 @@
                 <label><input type="radio" name="rating" id="fiveStar" required>&star;&star;&star;&star;&star;</label>
             </div>
 
-            <label for="date">Date of Installation</label>
+            <label for="date">Date of Installation *</label>
             <input type="date" name="date" id="date" required>
 
             <div class="features">
