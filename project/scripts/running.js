@@ -1,8 +1,14 @@
+/**************************************************** 
+ *
+ *           Common for all pages
+*
+****************************************************/
+
+// Selectors
 const currentYearSelector = document.querySelector("#currentYear");
 const lastModifiedSelector = document.querySelector("#lastModified");
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
-const eventSection = document.querySelector("#events-section");
 
 const today = new Date();
 
@@ -16,19 +22,67 @@ hamButton.addEventListener("click", () => {
     navigation.classList.toggle('open');
 });
 
+/**************************************************** 
+ *
+ *           Event Page only
+*
+****************************************************/
+
+// Selectors
+const eventSection = document.querySelector("#events-section");
+const allEvents = document.querySelector("#allEvents");
+const thisMonth = document.querySelector("#thisMonth");
+const nextMonth = document.querySelector("#nextMonth");
+
 // Array of Event Objects
 const events = [
     {
-        eventName: "Event 1",
+        eventName: "Group Run",
         location: "Etowah River Park",
         date: "June 10th, 2024",
+        time: "6:00 PM"
+    },
+    {
+        eventName: "The Bug Run 5k",
+        location: "Boiling Park",
+        date: "June 12th, 2024",
+        time: "9:00 AM"
+    },
+    {
+        eventName: "Peachtree Road Race",
+        location: "3393 Peachtree Rd NE",
+        date: "June 20th, 2024",
+        time: "7:00 AM"
+    },
+    {
+        eventName: "Group Run",
+        location: "Etowah River Park",
+        date: "June 26th, 2024",
+        time: "6:00 PM"
+    },
+    {
+        eventName: "AREA 13.1",
+        location: "Riverside Park",
+        date: "June 29th, 2024",
+        time: "8:30 AM"
+    },
+    {
+        eventName: "Cooldown 10k",
+        location: "Etowah River Park",
+        date: "July 3rd, 2024",
+        time: "9:00 AM"
+    },
+    {
+        eventName: "Fun Run",
+        location: "3522 Crimson Rd",
+        date: "July 10th, 2024",
         time: "11:00 AM"
     },
     {
-        eventName: "Event 2",
+        eventName: "Group Run",
         location: "Etowah River Park",
-        date: "June 10th, 2024",
-        time: "11:00 AM"
+        date: "July 14th, 2024",
+        time: "6:00 PM"
     }
 ]
 
@@ -45,15 +99,15 @@ function createEventCards(events) {
         eventCard.appendChild(eventName);
 
         const eventLocation = document.createElement("p");
-        eventLocation.textContent = event.location;
+        eventLocation.innerHTML = `<span class="card-info-label">Location:</span> ${event.location}`;
         eventCard.appendChild(eventLocation);
 
         const eventDate = document.createElement("p");
-        eventDate.textContent = event.date;
+        eventDate.innerHTML = `<span class="card-info-label">Date:</span> ${event.date}`;
         eventCard.appendChild(eventDate);
 
         const eventTime = document.createElement("p");
-        eventTime.textContent = event.time;
+        eventTime.innerHTML = `<span class="card-info-label">Time:</span> ${event.time}`;
         eventCard.appendChild(eventTime);
 
         eventSection.appendChild(eventCard);
@@ -62,3 +116,5 @@ function createEventCards(events) {
 
 // Call function to create events
 createEventCards(events);
+
+// Add event listener for All Events button
