@@ -30,6 +30,11 @@ h3
 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    padding: 1rem;
+}
+
+p {
+    padding: 1rem;
 }
 
 a {
@@ -72,6 +77,7 @@ header {
 
 header h1 {
     color: var(--accent-color);
+    padding: 0;
 }
 
 #menu {
@@ -126,6 +132,12 @@ footer {
     color: var(--accent-color);
     padding: 1rem;
     text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+footer p {
+    padding: 0;
 }
 
 /**************************************************** 
@@ -142,4 +154,27 @@ footer {
 
 .hero {
     display: none;
+}
+
+.home-section p {
+    text-align: center;
+}
+
+/**************************************************** 
+*
+*           Rules for About Us page only
+*
+****************************************************/
+
+.join-us a {
+    display: block;
+    padding: 1rem;
+    margin: 1rem auto;
+    font-weight: 800;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    max-width: 200px;
+    text-align: center;
+    border-radius: .5rem;
 }
