@@ -1,5 +1,10 @@
 @media (min-width: 640px) {
 
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
     /* Header area */
 
     header {
@@ -25,5 +30,17 @@
 
     .navigation a {
         display: block;
+    }
+
+    /* Home Page */
+    .hero {
+        display: block;
+        grid-column: 1/4;
+        padding: 0;
+    }
+
+    .home-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

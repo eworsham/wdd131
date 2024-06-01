@@ -36,6 +36,13 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 1rem;
+}
+
 /**************************************************** 
 *
 *           Content Defaults
@@ -132,3 +139,7 @@ footer {
 *           Rules for Home page only
 *
 ****************************************************/
+
+.hero {
+    display: none;
+}
