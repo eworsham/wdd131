@@ -1,0 +1,29 @@
+@media (min-width: 640px) {
+
+    /* Header area */
+
+    header {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        grid-column: 2/3;
+        margin: auto 0;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation ul li {
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        display: block;
+    }
+}
