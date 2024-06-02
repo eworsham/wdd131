@@ -171,5 +171,5 @@ if (form) {
 }
 
 if (requestedCountSelector) {
-    requestedCountSelector.innerHTML = `Total times requested: ${requestedCount}.`
+    requestedCountSelector.innerHTML = `Total times requested: ${requestedCount}`
 }
