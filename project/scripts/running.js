@@ -1,6 +1,6 @@
 /**************************************************** 
- *
- *           Common for all pages
+*
+*           Common for all pages
 *
 ****************************************************/
 
@@ -23,8 +23,8 @@ hamButton.addEventListener("click", () => {
 });
 
 /**************************************************** 
- *
- *           Event Page only
+*
+*           Event Page only
 *
 ****************************************************/
 
@@ -114,7 +114,41 @@ function createEventCards(events) {
     });
 }
 
-// Call function to create events
-createEventCards(events);
+// Check that page is the events page before doing anything
+if (eventSection) {
+    // Call function to create events
+    createEventCards(events);
 
-// Add event listener for All Events button
+    // Add event listener for All Events button
+    allEvents.addEventListener("click", () => {
+        createEventCards(events);
+    });
+    
+    // Add event listener for This Month button
+    thisMonth.addEventListener("click", () => {
+        let thisMonthArray = events.filter(event => {
+            let date = event.date.split(" ");
+            let month = date[0]
+            return month === "June";
+        });
+        createEventCards(thisMonthArray);
+    });
+    
+    // Add event listener for Next Month button
+    nextMonth.addEventListener("click", () => {
+        let nextMonthArray = events.filter(event => {
+            let date = event.date.split(" ");
+            let month = date[0];
+            return month === "July";
+        });
+        createEventCards(nextMonthArray);
+    });
+}
+
+/**************************************************** 
+*
+*           Membership Page only
+*
+****************************************************/
+
+
