@@ -16,10 +16,15 @@ const today = new Date();
 currentYearSelector.innerHTML = today.getFullYear();
 lastModifiedSelector.innerHTML = `Last Modification: ${document.lastModified}`;
 
+// Function to toggle open class
+function toggleOpen(element) {
+    element.classList.toggle('open');
+}
+
 // Menu button
 hamButton.addEventListener("click", () => {
-    hamButton.classList.toggle('open');
-    navigation.classList.toggle('open');
+    toggleOpen(hamButton);
+    toggleOpen(navigation);
 });
 
 /**************************************************** 
@@ -114,6 +119,14 @@ function createEventCards(events) {
     });
 }
 
+// Function to filter event array by month
+function filterByMonth(eventArray, month) {
+    return eventArray.filter(event => {
+        let date = event.date.split(" ");
+        return date[0] === month;
+    });
+}
+
 // Check that page is the events page before doing anything
 if (eventSection) {
     // Call function to create events
@@ -126,21 +139,13 @@ if (eventSection) {
     
     // Add event listener for This Month button
     thisMonth.addEventListener("click", () => {
-        let thisMonthArray = events.filter(event => {
-            let date = event.date.split(" ");
-            let month = date[0]
-            return month === "June";
-        });
+        let thisMonthArray = filterByMonth(events, "June");
         createEventCards(thisMonthArray);
     });
     
     // Add event listener for Next Month button
     nextMonth.addEventListener("click", () => {
-        let nextMonthArray = events.filter(event => {
-            let date = event.date.split(" ");
-            let month = date[0];
-            return month === "July";
-        });
+        let nextMonthArray = filterByMonth(events, "July");
         createEventCards(nextMonthArray);
     });
 }
