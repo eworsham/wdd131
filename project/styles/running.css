@@ -231,4 +231,37 @@ footer p {
     font-weight: 700;
 }
 
+/**************************************************** 
+*
+*           Rules for Membership page only
+*
+****************************************************/
 
+label {
+    display: block;
+    padding: 1.5rem 0 0 1rem;
+}
+
+input,
+textarea 
+{
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: .5rem 1rem 0 1rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+}
+
+form button {
+    display: block;
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}

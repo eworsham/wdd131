@@ -84,4 +84,24 @@
         flex: 1 1 100%;
         margin: 1rem;
     }
+
+    /**************************************************** 
+    *
+    *           Rules for Membership page only
+    *
+    ****************************************************/
+
+    label {
+        margin-left: 2.5rem;
+    }
+
+    input,
+    textarea 
+    {
+        margin: .5rem auto;
+    }
+
+    form button {
+        margin: 1rem auto;
+    }
 }

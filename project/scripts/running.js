@@ -156,4 +156,20 @@ if (eventSection) {
 *
 ****************************************************/
 
+// Selectors
+const requestedCountSelector = document.querySelector("#requestedCount");
+const form = document.querySelector("#form");
 
+// Initialize requested count
+let requestedCount = localStorage.getItem("requestedCount") || 0;
+
+if (form) {
+    form.addEventListener("submit", () => {
+        requestedCount++;
+        localStorage.setItem("requestedCount", requestedCount);
+    });
+}
+
+if (requestedCountSelector) {
+    requestedCountSelector.innerHTML = `Total times requested: ${requestedCount}.`
+}
